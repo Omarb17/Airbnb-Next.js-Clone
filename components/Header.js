@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import { GlobeAltIcon } from "@heroicons/react/24/solid";
 import { Bars3Icon } from "@heroicons/react/24/solid";
@@ -14,10 +14,16 @@ import { useRouter } from "next/navigation";
 
 function Header({ placeholder }) {
   const [searchInput, setSearchInput] = useState("");
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
+
   const [noOfGuests, setNoOfGuests] = useState(1);
   const router = useRouter();
+
+  useEffect(() => {
+    setStartDate(new Date());
+    setEndDate(new Date());
+  }, []);
 
   const handleSelect = (ranges) => {
     (setStartDate(ranges.selection.startDate),
