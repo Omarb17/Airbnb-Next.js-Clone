@@ -27,10 +27,10 @@ async function SearchContent({ searchParams }) {
 
   const Params = await searchParams;
 
-  const location = Params.location;
+  const location = Params.location || "";
   const startDate = Params.startDate;
   const endDate = Params.endDate;
-  const noOfGuests = Params.guests;
+  const noOfGuests = Params.guests || "1";
 
   const formattedStartDate = startDate
     ? format(new Date(startDate), "dd MMMM yy")
@@ -45,12 +45,31 @@ async function SearchContent({ searchParams }) {
       ? `${formattedStartDate} - ${formattedEndDate}`
       : "";
 
+  const placeholder =
+    location && range
+      ? `${location} | ${range} | ${noOfGuests} guests`
+      : "Start Your Search";
+
   return (
     <div className="min-h-screen">
-      <Header placeholder={`${location} | ${range} | ${noOfGuests} guests`} />
+      <Header placeholder={placeholder} />
 
       <main className="flex">
         <section className="grow px-6 pt-14">
+          <p className="text-xs">
+            300+ Stays - 24 August 2026 to 31 August 2026 - for 3 guests
+          </p>
+
+          <h1 className="mt-2 mb-6 text-3xl font-semibold">Stays in London</h1>
+
+          <div className="mb-5 hidden space-x-3 whitespace-nowrap text-gray-600 lg:inline-flex">
+            <p className="button">Cancellation Flexibility</p>
+            <p className="button">Type of Place</p>
+            <p className="button">Price</p>
+            <p className="button">Rooms and Beds</p>
+            <p className="button">More Filters</p>
+          </div>
+
           <div className="flex flex-col">
             {searchResult
               .filter((item) => imageMap[item.img])

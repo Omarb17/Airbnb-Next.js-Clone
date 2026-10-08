@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Map, { Marker, Popup } from "react-map-gl/mapbox";
-console.log("Mapbox token loaded:", process.env.NEXT_PUBLIC_MAPBOX_KEY);
 import "mapbox-gl/dist/mapbox-gl.css";
 import { getCenter } from "geolib";
 
