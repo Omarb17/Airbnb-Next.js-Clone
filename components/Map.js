@@ -12,7 +12,7 @@ function MapComponent({ searchResult }) {
   }));
 
   const center = getCenter(coordinates);
-  console.log(coordinates);
+
   const [viewPort, setViewPort] = useState({
     latitude: center.latitude,
     longitude: center.longitude,
@@ -22,31 +22,33 @@ function MapComponent({ searchResult }) {
   const [selectedProperty, setSelectedProperty] = useState(null);
 
   return (
-    <div className="h-230 w-200">
+    <div className="h-190 w-190">
       <Map
         mapStyle="mapbox://styles/omarb17/cmuyq8ctc003w01sg8hz8f1wr"
-        onMove={(event) => setViewPort(event.viewState)}
-        initialViewState={viewPort}
         mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_KEY}
         projection="mercator"
-        {...viewPort}
-        style={{ width: "100%", height: "100%" }}
+        initialViewState={viewPort}
+        onMove={(event) => setViewPort(event.viewState)}
+        style={{
+          width: "100%",
+          height: "100%",
+        }}
       >
         {searchResult.map((result) => (
-          <div key={result.long}>
-            <Marker
-              longitude={result.long}
-              latitude={result.lat}
-              anchor="bottom"
+          <Marker
+            key={`${result.long}-${result.lat}`}
+            longitude={result.long}
+            latitude={result.lat}
+            anchor="bottom"
+          >
+            <button
+              type="button"
+              onClick={() => setSelectedProperty(result)}
+              className="cursor-pointer rounded-full bg-white px-3 py-1.5 text-sm font-semibold shadow-md transition hover:scale-105 hover:shadow-lg"
             >
-              <button
-                onClick={() => setSelectedProperty(result)}
-                className="cursor-pointer rounded-full bg-white px-3 py-1.5 text-sm font-semibold shadow-md transition hover:scale-105 hover:shadow-lg"
-              >
-                {result.price}
-              </button>
-            </Marker>
-          </div>
+              {result.price}
+            </button>
+          </Marker>
         ))}
 
         {selectedProperty && (
@@ -54,16 +56,15 @@ function MapComponent({ searchResult }) {
             longitude={selectedProperty.long}
             latitude={selectedProperty.lat}
             anchor="bottom"
-            className="pb-6"
             closeButton={true}
             closeOnClick={false}
             onClose={() => setSelectedProperty(null)}
           >
-            <div className="w-645">
+            <div className="w-64">
               <img
                 src={selectedProperty.img}
                 alt={selectedProperty.title}
-                className="h-32 w-55 rounded-lg object-cover"
+                className="h-32 w-full rounded-lg object-cover"
               />
 
               <div className="mt-2">
