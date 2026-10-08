@@ -23,7 +23,7 @@ function MapComponent({ searchResult }) {
   const [selectedProperty, setSelectedProperty] = useState(null);
 
   return (
-    <div className="h-205 w-200">
+    <div className="h-230 w-200">
       <Map
         mapStyle="mapbox://styles/omarb17/cmuyq8ctc003w01sg8hz8f1wr"
         onMove={(event) => setViewPort(event.viewState)}
@@ -55,11 +55,12 @@ function MapComponent({ searchResult }) {
             longitude={selectedProperty.long}
             latitude={selectedProperty.lat}
             anchor="bottom"
+            className="pb-6"
             closeButton={true}
             closeOnClick={false}
             onClose={() => setSelectedProperty(null)}
           >
-            <div className="w-64">
+            <div className="w-645">
               <img
                 src={selectedProperty.img}
                 alt={selectedProperty.title}

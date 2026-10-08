@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import InfoCard from "@/components/InfoCard";
-import MapComponent from "@/components/Map";
+import MapClient from "@/components/MapClient";
 import { format } from "date-fns";
 import React from "react";
 
@@ -37,7 +37,7 @@ async function search({ searchParams }) {
   const range = `${formattedStartDate} - ${formattedEndDate}`;
 
   return (
-    <div className="h-screen">
+    <div className="min-h-screen">
       <Header placeholder={`${location} | ${range} | ${noOfGuests} guests`} />
       <main className="flex">
         <section className="grow pt-14 px-6">
@@ -73,7 +73,7 @@ async function search({ searchParams }) {
         </section>
 
         <section className="hidden sticky top-20 self-start lg:flex xl:min-w-200 ">
-          <MapComponent searchResult={searchResult} />
+          <MapClient searchResult={searchResult} />
         </section>
       </main>
 
