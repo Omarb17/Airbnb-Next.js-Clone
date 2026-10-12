@@ -15,7 +15,7 @@ function Footer() {
 
         <div className="space-y-4 text-sm text-gray-700">
           <h5 className="font-semibold text-gray-900">Hosting</h5>
-          <p className="cursor-pointer hover:underline">Airbnb your home</p>
+          <p className="cursor-pointer hover:underline">WaterBnb your home</p>
           <p className="cursor-pointer hover:underline">AirCover for Hosts</p>
           <p className="cursor-pointer hover:underline">Hosting resources</p>
           <p className="cursor-pointer hover:underline">Community forum</p>
@@ -23,7 +23,7 @@ function Footer() {
         </div>
 
         <div className="space-y-4 text-sm text-gray-700">
-          <h5 className="font-semibold text-gray-900">Airbnb</h5>
+          <h5 className="font-semibold text-gray-900">WaterBnb</h5>
           <p className="cursor-pointer hover:underline">Newsroom</p>
           <p className="cursor-pointer hover:underline">New features</p>
           <p className="cursor-pointer hover:underline">Careers</p>
@@ -37,13 +37,15 @@ function Footer() {
           <p className="cursor-pointer hover:underline">Unique stays</p>
           <p className="cursor-pointer hover:underline">Experiences</p>
           <p className="cursor-pointer hover:underline">Travel inspiration</p>
-          <p className="cursor-pointer hover:underline">Airbnb Magazine</p>
+          <p className="cursor-pointer hover:underline">WaterBnb Magazine</p>
         </div>
       </div>
 
       <div className="border-t">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-8 py-6 text-sm text-gray-700 md:flex-row md:items-center md:justify-between">
-          <p>© 2026 Airbnb Clone. All rights reserved.</p>
+          <p>
+            © 2026 Independent portfolio project — not affiliated with Airbnb.
+          </p>
 
           <div className="flex gap-5">
             <p className="cursor-pointer hover:underline">Privacy</p>

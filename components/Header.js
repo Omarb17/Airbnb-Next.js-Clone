@@ -60,7 +60,7 @@ function Header({ placeholder }) {
         className="relative flex items-center h-10 w-40 cursor-pointer my-auto"
       >
         <Image
-          src="/airbnbLogo.webp"
+          src="/Airbnb_Clone_Logo.png"
           layout="fill"
           objectFit="contain"
           objectPosition="left"

@@ -53,7 +53,7 @@ export default async function Home() {
         <LargeCard
           img="https://links.papareact.com/4cj"
           title="The Greatest Outdoors"
-          description="Wishlists Curated By AIrbnb"
+          description="Wishlists Curated By Hairbnb"
           buttonText="Get Inspired"
         />
       </main>
