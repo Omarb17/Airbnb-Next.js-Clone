@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+🌐 Live Demo: https://airbnb-next-js-clone-one.vercel.app
 
-## Getting Started
+<img width="1892" height="893" alt="Capture d&#39;écran 2026-10-08 132245" src="https://github.com/user-attachments/assets/6f6d69d6-9fd9-434b-94e6-3fc5d950f63a" />
+<img width="1887" height="891" alt="Capture d&#39;écran 2026-10-08 132156" src="https://github.com/user-attachments/assets/7d3f8d25-1330-4a71-8bfe-f286512b7325" />
+<img width="454" height="795" alt="Capture d&#39;écran 2026-10-08 132351" src="https://github.com/user-attachments/assets/d6cc0f54-a1be-44b6-8ca2-5d349347e8fa" />
+<img width="325" height="704" alt="Capture d&#39;écran 2026-10-08 132449" src="https://github.com/user-attachments/assets/6df85ebf-2d77-44ef-9348-69c6cc1abdde" />
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Tech Stack: 
+- Next.js 
+- React
+- Tailwind CSS 
+- Mapbox: for interactive maps
+- Geolib: for location calculations
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- React Date Range: for calendar & date picker
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- React Map GL: for integrating Mapbox with React, including Markers and Popups for displaying property locations and information
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+What I worked on:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Next.js App Router, Server/Client Components, and React state management
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Property search with location-based results
 
-## Deploy on Vercel
+- Location-based property mapping using Mapbox and React Map GL, with property Markers and Popups displaying relevant property information
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Geolocation and map positioning using Geolib 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Calendar and date picker for selecting check-in and check-out dates
+
+- Server-side rendering with Next.js
+
+- Responsive design across different screen sizes
+
